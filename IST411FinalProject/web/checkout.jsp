@@ -1,7 +1,7 @@
 <%-- 
     Document   : checkout
     Created on : Apr 29, 2014, 11:33:37 AM
-    Author     : Oakes
+    Author     : Oakes / Roman
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -26,6 +26,17 @@
                 
             }
         %>
+        
+        <div>
+            <h2>Your Shopping Cart</h2>
+            <h3>Meat</h3>
+            <!-- show product here -->
+            <hr>
+            <h3>Produce</h3>
+            <!-- show product here -->
+            <hr>
+                
+        </div>
         
         <form action="SecondServlet" method="post" >
             Please enter your name as it appears on your credit/debit card.
