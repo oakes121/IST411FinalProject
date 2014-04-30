@@ -1,6 +1,6 @@
 //File name: CreditCardValidation.java
 //
-//Authors: oakes Isaac and Roman Galysh
+//Authors: Oakes Isaac and Roman Galysh
 //
 
 
