@@ -15,7 +15,7 @@ public class ShippingCalc {
     public float getRate(int zip, float lb)
     {
         int startZip = 17402;
-        float rate = ((startZip - zip)/1000 +1) * lb;
+        float rate = (Math.abs(startZip - zip)/1000 +1) * lb;
         return rate;   
     }
 }
