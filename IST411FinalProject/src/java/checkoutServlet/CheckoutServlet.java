@@ -5,6 +5,7 @@
  */
 
 package checkoutServlet;
+import shipping.ShippingCalc;
 
 import creditCardValidation.CreditCardValidation;
 import java.io.IOException;
@@ -20,7 +21,9 @@ import javax.servlet.http.HttpServletResponse;
  * @author Oakes
  */
 public class CheckoutServlet extends HttpServlet {
-
+    private float rate;
+    private int zip;
+    private float lb;
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -39,21 +42,21 @@ public class CheckoutServlet extends HttpServlet {
           
             String cardNumber = (String) request.getParameter("cardNumber");
             String fullName = (String) request.getParameter("fullName"); 
+           
             
             if (CreditCardValidation.validate(cardNumber)) {
-                                
+                  rate = ShippingCalc.getRate(zip,lb);              
                 
                 request.setAttribute("fullName", fullName);
                 
                 String url = "/confirmTotal.jsp";
-                RequestDispatcher dispatcher =
-                        getServletContext().getRequestDispatcher(url);
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
+                request.setAttribute("rate", rate);
                 dispatcher.forward(request, response);                   
             } else {
                 request.setAttribute("error", "You have entered an invalid card number. Please Try Again!");
                 String url = "/checkout.jsp";
-                RequestDispatcher dispatcher =
-                        getServletContext().getRequestDispatcher(url);
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
                 dispatcher.forward(request, response);  
             }
             
