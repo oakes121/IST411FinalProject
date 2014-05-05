@@ -1,7 +1,7 @@
 <%-- 
     Document   : confirmTotal
     Created on : Apr 29, 2014, 11:30:36 AM
-    Author     : Oakes
+    Author     : Oakes / Roman
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -16,7 +16,10 @@
         String fullName = (String) request.getAttribute("fullName");
     %>
     
-    <body>
-        <h1><%= fullName %> your total price is $<%= price %>.</h1>
+    <body style="background-color: #690;">
+        <div style ="padding: 30px;">
+        <img style="width:300px;" src ="pig.png">
+        <h3><%= fullName %> your total price is $<%= price %>.</h3>
+        </div>
     </body>
 </html>

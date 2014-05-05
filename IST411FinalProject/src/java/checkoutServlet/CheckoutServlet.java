@@ -18,12 +18,14 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Oakes
+ * @author Oakes / Roman
  */
 public class CheckoutServlet extends HttpServlet {
+    
     private float rate;
     private int zip;
     private float lb;
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -45,7 +47,8 @@ public class CheckoutServlet extends HttpServlet {
            
             
             if (CreditCardValidation.validate(cardNumber)) {
-                  rate = ShippingCalc.getRate(zip,lb);              
+                
+                rate = ShippingCalc.getRate(zip,lb);              
                 
                 request.setAttribute("fullName", fullName);
                 
@@ -53,7 +56,9 @@ public class CheckoutServlet extends HttpServlet {
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
                 request.setAttribute("rate", rate);
                 dispatcher.forward(request, response);                   
-            } else {
+            } 
+            
+            else {
                 request.setAttribute("error", "You have entered an invalid card number. Please Try Again!");
                 String url = "/checkout.jsp";
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);

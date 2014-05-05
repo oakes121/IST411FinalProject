@@ -11,7 +11,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <body>
+    <body style="background-color: #690;">
+        <div style ="padding: 30px;">
+        <img style="width:300px;" src ="pig.png">>
         <script src="allNumeric.js"></script>
         <h1>Checkout</h1>
         
