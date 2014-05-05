@@ -31,9 +31,11 @@
             <h2>Your Shopping Cart</h2>
             <h3>Meat</h3>
             <!-- show product here -->
+            <%= request.getAttribute("correct") %>
             <hr>
             <h3>Produce</h3>
             <!-- show product here -->
+            <%= request.getAttribute("correct") %>
             <hr>
                 
         </div>
