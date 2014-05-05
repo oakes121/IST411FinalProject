@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Check Out</title>
     </head>
     <body style="background-color: #690;">
         <div style ="padding: 30px;">
