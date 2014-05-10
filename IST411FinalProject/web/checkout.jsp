@@ -39,14 +39,32 @@
         </div>
         
         <form action="SecondServlet" method="post" >
-            Please enter your name as it appears on your credit/debit card.
-            <input type="text" name ="fullName" required/>
-            <br />
-            Please enter your credit card number
-            <input type="text" name ="cardNumber" required/>
-            <br />
-            Press submit when you are done
-            <input type="submit" onClick="return allNumeric(form)"/>
-            </form>  
+            <span style="font-family: '@Arial Unicode MS'; font-weight: bold; font-style: normal; text-decoration:  underline; font-size: 12pt;"><head>Customer Information</head> </span>
+                <p>
+                <label for=""><span style="font-family: '@Arial Unicode MS'; font-weight: normal; font-style: normal; text-decoration: none; font-size: 12pt;">Customer Name</span></label> 
+                <input type="text" name="CustName" value=""></p>
+                <p>
+                <label for="">Street Address</label>
+                <input type="text" name="Street Address" value=""></p>
+                <p>
+                <label for="">City</label>
+                <input type="text" name="City" value="">
+                <label for="">State</label>
+                <input type="text" name="State" value="" required>
+                <label for="">Zip Code</label>
+                <input type="text" name="ZipCode" value=""></p>
+                <br />
+
+                <p>
+                <span style="font-family: '@Arial Unicode MS'; font-weight: bold; font-style: normal; text-decoration:  underline; font-size: 12pt;"><head>Payment Information</head></span></p>
+                <label for="">Credit Card Number</label>
+                <input type="text" name="cardNumber" value=""> 
+                <label for="">Expiration Date</label>
+                <input type="text" name="ExpDate" value=""> <label for="">Security Code</label><input type="text" name="SecCode" value="">
+                <br />
+                <br />
+                <br />
+                <input type="Submit" name="Submit" value="Submit" onClick="return allNumeric(form)">
+        </form>
     </body>
 </html>

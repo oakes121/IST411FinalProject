@@ -92,10 +92,10 @@ public class DatabaseInterface {
             
             ResultSet rs = stmt.executeQuery("SELECT * FROM PRODUCT where PRODUCTCATEGORY_IDPRODUCTCATEGORY = " + id + "");
      
+            
             while (rs.next())
             {        
-                JOptionPane.showMessageDialog(null, rs.getString(2) + "" + rs.getString(3 + "" + rs.getString(4)));
-                //products.add(new Product(rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(7)));
+                products.add(new Product(rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(7)));
             }
             
             stmt.close();
