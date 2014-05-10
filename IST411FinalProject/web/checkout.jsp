@@ -9,9 +9,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Check Out</title>
     </head>
-    <body>
+    <body style="background-color: #690;">
+        <div style ="padding: 30px;">
+        <img style="width:300px;" src ="pig.png">>
         <script src="allNumeric.js"></script>
         <h1>Checkout</h1>
         
@@ -31,9 +33,11 @@
             <h2>Your Shopping Cart</h2>
             <h3>Meat</h3>
             <!-- show product here -->
+            <%= request.getAttribute("correct") %>
             <hr>
             <h3>Produce</h3>
             <!-- show product here -->
+            <%= request.getAttribute("correct") %>
             <hr>
                 
         </div>
