@@ -4,9 +4,17 @@
         <servlet-name>CheckoutServlet</servlet-name>
         <servlet-class>checkoutServlet.CheckoutServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>productServlet</servlet-name>
+        <servlet-class>productServlet.ProductServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CheckoutServlet</servlet-name>
         <url-pattern>/SecondServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>productServlet</servlet-name>
+        <url-pattern>/proserv</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
