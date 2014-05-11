@@ -21,17 +21,19 @@
         
         
     <body>
-        <table style="width:300px">
+        <table style="width:500px">
+            <form>
         <%        
             for (int i = 0; i < fruits.size(); i++) {
                 out.print("<tr>");
-                out.print("<td>" + " Title : " + fruits.get(i).getTitle() + "</td>");        
-                out.print("<td>" + " Price : " + fruits.get(i).getPrice() + "$ </td>"); 
-                out.print("<td>" + " Weight: " + fruits.get(i).getWeight() + "lbs </td>");                
+                out.print("<td>" + " Product : " + fruits.get(i).getTitle() + "</td>");        
+                out.print("<td>" + " Price   : " + fruits.get(i).getPrice() + "$ </td>"); 
+                out.print("<td>" + " Weight  : " + fruits.get(i).getWeight() + "lbs </td>");                
                 out.print("</tr>");
             }
          
         %>
+            </form>
          </table>
         
     </body>
