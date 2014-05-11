@@ -46,6 +46,7 @@ public class ProductServlet extends HttpServlet {
                   request.setAttribute("fruits", fruits);
                   request.setAttribute("meats", meats);
                   
+                  
                   String url = "/ProductPage.jsp";
                   RequestDispatcher dispatcher =
                           getServletContext().getRequestDispatcher(url);

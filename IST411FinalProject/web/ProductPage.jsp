@@ -6,6 +6,8 @@
 
 <%@page import="java.util.ArrayList"%>
 <%@page import="product.Product"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="p" %>  
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -23,8 +25,75 @@
     <body>
         <table style="width:500px">
             <form>
-        <%        
-            for (int i = 0; i < fruits.size(); i++) {
+                
+                
+         <%--<%        
+                for (int i = 0; i < meats.size(); i++) {
+                out.print("<tr>");
+                out.print("<td>" + " Product : " + meats.get(i).getTitle() + "</td>");        
+                out.print("<td>" + " Price   : " + meats.get(i).getPrice() + "$ </td>"); 
+                out.print("<td>" + " Weight  : " + meats.get(i).getWeight() + "lbs </td>");
+                out.print("</tr>");
+            }
+         
+        %>--%>
+                        <% request.getParameter("fruits"); %>
+                        <p:forEach items="${fruits}" var="fruits">
+                        <tr>  
+                          
+                        <td>  
+                            Product: <p:out value="${fruits.title}"></p:out>  
+                              
+                        </td>  
+                          
+                        <td>  
+                            Price: $<p:out value="${fruits.price}"></p:out>  
+                        </td>  
+                          
+                        <td>  
+                            Weight: <p:out value="${fruits.weight}"></p:out>lbs  
+                        </td>
+                        <td>  
+                            <input type="checkbox" name="check">  
+                        </td>
+                    </tr>
+                </p:forEach>
+                   
+                    
+                    
+                    
+                    <% request.getParameter("meats"); %>
+                        <p:forEach items="${meats}" var="meats">
+                   
+                        <tr>   
+                          
+                        <td>  
+                            Product: <p:out value="${meats.title}"></p:out>  
+                              
+                        </td>  
+                          
+                        <td>  
+                            Price: $<p:out value="${meats.price}"></p:out>  
+                        </td>  
+                          
+                        <td>  
+                            Weight: <p:out value="${meats.weight}"></p:out>lbs  
+                        </td>
+                        <td>  
+                            <input type="checkbox" name="check">  
+                        </td>
+                    </tr>  
+                </p:forEach>
+                    
+                    
+                    
+                    
+        
+        
+        
+        <%--<%        
+               
+                for (int i = 0; i < fruits.size(); i++) {
                 out.print("<tr>");
                 out.print("<td>" + " Product : " + fruits.get(i).getTitle() + "</td>");        
                 out.print("<td>" + " Price   : " + fruits.get(i).getPrice() + "$ </td>"); 
@@ -32,7 +101,8 @@
                 out.print("</tr>");
             }
          
-        %>
+        %>--%>
+        
             </form>
          </table>
         
