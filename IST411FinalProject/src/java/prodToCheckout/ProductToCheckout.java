@@ -4,28 +4,26 @@
  * and open the template in the editor.
  */
 
-package checkoutServlet;
-import shipping.ShippingCalc;
+package prodToCheckout;
 
-import creditCardValidation.CreditCardValidation;
+import databaseInterface.DatabaseInterface;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import product.Product;
 
 /**
  *
- * @author Oakes / Roman
+ * @author Oakes
  */
-public class CheckoutServlet extends HttpServlet {
-    
-    private double rate;
-    private int zip;
-    private float lb;
-    
+public class ProductToCheckout extends HttpServlet {
+    ArrayList<Product> selected = new ArrayList<Product>();
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -41,44 +39,60 @@ public class CheckoutServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         try {
             /* TODO output your page here. You may use following sample code. */
-          
-            String cardNumber = (String) request.getParameter("cardNumber");
-            String fullName = (String) request.getParameter("fullName"); 
-            String weight = (String) request.getAttribute("weight");
+            DatabaseInterface dbi = new DatabaseInterface(1);
+            ArrayList<Product> fruits =  dbi.getProducts();
+                  
+            DatabaseInterface dbi2 = new DatabaseInterface(2);
+            ArrayList<Product> meats=  dbi2.getProducts();
             
+            String bananas = request.getParameter("fruitCheck0");
+            String apples = request.getParameter("fruitCheck1");
+            String grapes = request.getParameter("fruitCheck2");
+            String steak = request.getParameter("meatCheck0");
+            String chicken = request.getParameter("meatCheck1");
+            String pork = request.getParameter("meatCheck2");
+            
+            
+            addProduct(bananas, fruits, 0);
+            addProduct(apples, fruits, 1);
+            addProduct(grapes, fruits, 2);
+            addProduct(steak, meats, 0);
+            addProduct(chicken, meats, 1);
+            addProduct(pork, meats, 2);
+            
+            request.setAttribute("selected", selected); 
+            
+            String url = "/checkout.jsp";
+                  RequestDispatcher dispatcher =
+                          getServletContext().getRequestDispatcher(url);
+                  dispatcher.forward(request, response); 
+            
+            /*
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet ProductToCheckout</title>");            
             out.println("</head>");
             out.println("<body>");
+            out.println(fruits.get(0).getTitle());
+            out.println(apples == null ? "false" : "true");
+            out.println(grapes == null ? "false" : "true");
+            out.println(steak == null ? "false" : "true");
+            out.println(chicken == null ? "false" : "true");
+            out.println(pork == null ? "false" : "true");
             out.println("</body>");
-            out.println("</html>");
-            
-            /*
-            if (CreditCardValidation.validate(cardNumber)) {
-                
-                rate = ShippingCalc.getRate(zip,lb);              
-                
-                request.setAttribute("fullName", fullName);
-                
-                String url = "/confirmTotal.jsp";
-                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
-                request.setAttribute("rate", rate);
-                dispatcher.forward(request, response);                   
-            } 
-            
-            else {
-                request.setAttribute("error", "You have entered an invalid card number. Please Try Again!");
-                String url = "/checkout.jsp";
-                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
-                dispatcher.forward(request, response);  
-            }*/
-            
+            out.println("</html>"); */
         } finally {
             out.close();
         }
     }
+    
+    private void addProduct(String product, ArrayList<Product> fruitOrMeat, int index) {
+        if (product != null)
+            selected.add(fruitOrMeat.get(index));
+            
+    }
+    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

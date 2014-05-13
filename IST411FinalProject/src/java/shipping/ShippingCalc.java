@@ -12,10 +12,10 @@ package shipping;
  */
 public class ShippingCalc {
     
-    public static float getRate(int zip, float lb)
+    public static double getRate(int zip, float lb)
     {
         int startZip = 17402;
-        float rate = (Math.abs(startZip - zip)/1000 +1) * lb;
+        double rate = (Math.abs(startZip - zip)/1000 +1) * lb;
         return rate;   
     }
 }

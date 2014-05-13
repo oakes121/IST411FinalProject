@@ -22,87 +22,48 @@
         %>
         
         
-    <body>
+    <body body style="background-color: #690;">
         <table style="width:500px">
-            <form>
+            <form action="PTC" method="post">
+     
+                        
+                <%
+                    for (int i = 0;i < fruits.size();i++) {
+                        out.println("<tr>");
+                        out.println("<td>");
+                        out.println("Product: " + fruits.get(i).getTitle());
+                        out.println("</td>");
+                        out.println("<td>");
+                        out.println("Price " + fruits.get(i).getPrice() + "$");
+                        out.println("</td>");
+                        out.println("<td>");
+                        out.println("Weight " + fruits.get(i).getWeight() + "lbs");
+                        out.println("</td>");
+                        out.println("<td>");
+                        out.println("<input type=checkbox name=fruitCheck" + i + ">" + "");
+                        out.println("</td>");                        
+                    }        
+                %>
                 
-                
-         <%--<%        
-                for (int i = 0; i < meats.size(); i++) {
-                out.print("<tr>");
-                out.print("<td>" + " Product : " + meats.get(i).getTitle() + "</td>");        
-                out.print("<td>" + " Price   : " + meats.get(i).getPrice() + "$ </td>"); 
-                out.print("<td>" + " Weight  : " + meats.get(i).getWeight() + "lbs </td>");
-                out.print("</tr>");
-            }
-         
-        %>--%>
-                        <% request.getParameter("fruits"); %>
-                        <p:forEach items="${fruits}" var="fruits">
-                        <tr>  
-                          
-                        <td>  
-                            Product: <p:out value="${fruits.title}"></p:out>  
-                              
-                        </td>  
-                          
-                        <td>  
-                            Price: $<p:out value="${fruits.price}"></p:out>  
-                        </td>  
-                          
-                        <td>  
-                            Weight: <p:out value="${fruits.weight}"></p:out>lbs  
-                        </td>
-                        <td>  
-                            <input type="checkbox" name="check">  
-                        </td>
-                    </tr>
-                </p:forEach>
-                   
+                <%
+                    for (int i = 0;i < fruits.size();i++) {
+                        out.println("<tr>");
+                        out.println("<td>");
+                        out.println("Product: " + meats.get(i).getTitle());
+                        out.println("</td>");
+                        out.println("<td>");
+                        out.println("Price " + meats.get(i).getPrice() + "$");
+                        out.println("</td>");
+                        out.println("<td>");
+                        out.println("Weight " + meats.get(i).getWeight() + "lbs");
+                        out.println("</td>");
+                        out.println("<td>");
+                        out.println("<input type=checkbox name=meatCheck" + i + ">" + "");
+                        out.println("</td>");                        
+                    }        
+                %>
                     
-                    
-                    
-                    <% request.getParameter("meats"); %>
-                        <p:forEach items="${meats}" var="meats">
-                   
-                        <tr>   
-                          
-                        <td>  
-                            Product: <p:out value="${meats.title}"></p:out>  
-                              
-                        </td>  
-                          
-                        <td>  
-                            Price: $<p:out value="${meats.price}"></p:out>  
-                        </td>  
-                          
-                        <td>  
-                            Weight: <p:out value="${meats.weight}"></p:out>lbs  
-                        </td>
-                        <td>  
-                            <input type="checkbox" name="check">  
-                        </td>
-                    </tr>  
-                </p:forEach>
-                    
-                    
-                    
-                    
-        
-        
-        
-        <%--<%        
-               
-                for (int i = 0; i < fruits.size(); i++) {
-                out.print("<tr>");
-                out.print("<td>" + " Product : " + fruits.get(i).getTitle() + "</td>");        
-                out.print("<td>" + " Price   : " + fruits.get(i).getPrice() + "$ </td>"); 
-                out.print("<td>" + " Weight  : " + fruits.get(i).getWeight() + "lbs </td>");                
-                out.print("</tr>");
-            }
-         
-        %>--%>
-        
+                    <input type="Submit" name="Submit" value="Proceed To Checkout"">
             </form>
          </table>
         

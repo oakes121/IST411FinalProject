@@ -8,6 +8,10 @@
         <servlet-name>productServlet</servlet-name>
         <servlet-class>productServlet.ProductServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ProductToCheckout</servlet-name>
+        <servlet-class>prodToCheckout.ProductToCheckout</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CheckoutServlet</servlet-name>
         <url-pattern>/SecondServlet</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>productServlet</servlet-name>
         <url-pattern>/proserv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProductToCheckout</servlet-name>
+        <url-pattern>/PTC</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
