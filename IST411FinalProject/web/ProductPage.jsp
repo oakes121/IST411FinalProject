@@ -23,6 +23,9 @@
         
         
     <body body style="background-color: #690;">
+        <img style="width:300px;" src ="pig.png">
+        <br/>
+        <br/>
         <table style="width:500px">
             <form action="PTC" method="post">
      
@@ -63,7 +66,7 @@
                     }        
                 %>
                     
-                    <input type="Submit" name="Submit" value="Proceed To Checkout"">
+                    <input type="Submit" name="Submit" value="Proceed To Checkout">
             </form>
          </table>
         
