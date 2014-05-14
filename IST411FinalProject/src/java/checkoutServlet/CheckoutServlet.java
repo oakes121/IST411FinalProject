@@ -55,7 +55,7 @@ public class CheckoutServlet extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
             
-            /*
+            
             if (CreditCardValidation.validate(cardNumber)) {
                 
                 rate = ShippingCalc.getRate(zip,lb);              
@@ -73,7 +73,7 @@ public class CheckoutServlet extends HttpServlet {
                 String url = "/checkout.jsp";
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
                 dispatcher.forward(request, response);  
-            }*/
+            }
             
         } finally {
             out.close();
