@@ -43,7 +43,7 @@ public class CheckoutServlet extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
           
             String cardNumber = (String) request.getParameter("cardNumber");
-            String fullName = (String) request.getParameter("fullName"); 
+            String custName = (String) request.getParameter("CustName"); 
             String weight = (String) request.getAttribute("weight");
             
             out.println("<!DOCTYPE html>");
@@ -60,7 +60,7 @@ public class CheckoutServlet extends HttpServlet {
                 
                 rate = ShippingCalc.getRate(zip,lb);              
                 
-                request.setAttribute("fullName", fullName);
+                request.setAttribute("CustName", custName);
                 
                 String url = "/confirmTotal.jsp";
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);

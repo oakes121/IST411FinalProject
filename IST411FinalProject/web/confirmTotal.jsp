@@ -13,7 +13,7 @@
     </head>
     <%
         String price = (String) request.getAttribute("totalPrice"); 
-        String fullName = (String) request.getAttribute("fullName");
+        String fullName = (String) request.getAttribute("CustName");
     %>
     
     <body style="background-color: #690;">
