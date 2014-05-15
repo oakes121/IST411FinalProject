@@ -28,15 +28,7 @@
             int weight = 0;
             int price = 0;
             
-            try {
-                String error = (String) request.getAttribute("error");
-
-                if (error.equals("You have entered an invalid card number. Please Try Again!")){
-                    out.print("<h2>" + error + "</h2>");
-                }
-            } catch(NullPointerException e) {
-                
-            }
+          
         %>
         
         <div>
