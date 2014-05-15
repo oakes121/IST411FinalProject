@@ -20,18 +20,19 @@
         %>
             
         <div style ="padding: 30px;">
-        <img style="width:300px;" src ="pig.png">>
+        <img style="width:300px;" src ="pig.png">
         <script src="allNumeric.js"></script>
         <h1>Checkout</h1>
         
-        <%
+       <%
             int weight = 0;
             int price = 0;
+            
             try {
                 String error = (String) request.getAttribute("error");
 
                 if (error.equals("You have entered an invalid card number. Please Try Again!")){
-                    out.print("<h2>"+error+"</h2>");
+                    out.print("<h2>" + error + "</h2>");
                 }
             } catch(NullPointerException e) {
                 
@@ -65,7 +66,7 @@
                 
             %>
         </div>
-        
+        <hr>
         <form action="SecondServlet" method="post" >
             <span style="font-family: '@Arial Unicode MS'; font-weight: bold; font-style: normal; text-decoration:  underline; font-size: 12pt;"><head>Customer Information</head> </span>
                 <p>
@@ -82,7 +83,7 @@
                 <label for="">Zip Code</label>
                 <input type="text" name="ZipCode" value="" required></p>
                 <br />
-
+                <hr>
                 <p>
                 <span style="font-family: '@Arial Unicode MS'; font-weight: bold; font-style: normal; text-decoration:  underline; font-size: 12pt;"><head>Payment Information</head></span></p>
                 <label for="">Credit Card Number</label>

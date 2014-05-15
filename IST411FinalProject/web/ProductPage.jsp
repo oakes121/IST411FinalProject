@@ -26,10 +26,10 @@
         <img style="width:300px;" src ="pig.png">
         <br/>
         <br/>
+        <h3>Please Make a Selection:</h3>
         <table style="width:500px">
             <form action="PTC" method="post">
-     
-                        
+             
                 <%
                     for (int i = 0;i < fruits.size();i++) {
                         out.println("<tr>");
@@ -65,7 +65,7 @@
                         out.println("</td>");                        
                     }        
                 %>
-                    
+                    <br/>
                     <input type="Submit" name="Submit" value="Proceed To Checkout">
             </form>
          </table>

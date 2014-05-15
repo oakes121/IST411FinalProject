@@ -13,13 +13,13 @@
     </head>
     <%
         String price = (String) request.getAttribute("totalPrice"); 
-        String fullName = (String) request.getAttribute("CustName");
+        String custName = (String) request.getAttribute("CustName");
     %>
     
     <body style="background-color: #690;">
         <div style ="padding: 30px;">
         <img style="width:300px;" src ="pig.png">
-        <h3><%= fullName %> your total price is $<%= price %>.</h3>
+        <h3><%= custName %> your total price is $<%= price %>.</h3>
         </div>
     </body>
 </html>

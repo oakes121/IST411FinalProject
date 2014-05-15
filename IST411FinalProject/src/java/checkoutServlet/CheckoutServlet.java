@@ -69,9 +69,9 @@ public class CheckoutServlet extends HttpServlet {
             } 
             
             else {
-                request.setAttribute("error", "You have entered an invalid card number. Please Try Again!");
-                String url = "/checkout.jsp";
-                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
+                request.setAttribute("error", cardNumber);
+                
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/errorPage.jsp");
                 dispatcher.forward(request, response);  
             }
             
