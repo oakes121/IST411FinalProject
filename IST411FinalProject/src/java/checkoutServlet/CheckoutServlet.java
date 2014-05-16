@@ -45,7 +45,7 @@ public class CheckoutServlet extends HttpServlet {
             String cardNumber = (String) request.getParameter("cardNumber");
             String custName = (String) request.getParameter("CustName"); 
             String weight = (String) request.getAttribute("weight");
-            String totalPrice = (String) request.getAttribute("price");
+            String price = (String) request.getAttribute("price");
             
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -61,7 +61,7 @@ public class CheckoutServlet extends HttpServlet {
                 
                 rate = ShippingCalc.getRate(zipCode,lb);              
                                 
-                request.setAttribute("totalPrice", totalPrice);
+                request.setAttribute("price", price);
                 request.setAttribute("CustName", custName);
                 request.setAttribute("rate", rate);
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/confirmTotal.jsp");

@@ -12,8 +12,8 @@
         <title>Confirm Total</title>
     </head>
     <%
-        String price = (String) request.getAttribute("totalPrice"); 
-        String custName = (String) request.getAttribute("CustName");
+       // String price = (String) request.getAttribute("totalPrice"); 
+       // String custName = (String) request.getAttribute("CustName");
     %>
     
     <body style="background-color: #690;">
@@ -21,7 +21,7 @@
         <img style="width:300px;" src ="pig.png">
         <h3><%= request.getAttribute("CustName") %>,<br/>
             <p></p>
-            Your total price is $<%= request.getAttribute("totalPrice") %>.<br/>
+            Your total price is $<%= request.getAttribute("price") %>.<br/>
             Your shipping charges are $<%= request.getAttribute("rate") %>.<br/></h3>
             <p>Thank you for shopping with us!</p>
         </div>
