@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 public class CheckoutServlet extends HttpServlet {
     
     private double rate;
-    private int zip;
+    private int zipCode;
     private float lb;
     
     /**
@@ -59,7 +59,7 @@ public class CheckoutServlet extends HttpServlet {
             
             if (CreditCardValidation.validate(cardNumber)) {
                 
-                rate = ShippingCalc.getRate(zip,lb);              
+                rate = ShippingCalc.getRate(zipCode,lb);              
                                 
                 request.setAttribute("totalPrice", totalPrice);
                 request.setAttribute("CustName", custName);

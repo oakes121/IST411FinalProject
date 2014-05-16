@@ -3,7 +3,7 @@
     Created on : Apr 29, 2014, 11:33:37 AM
     Author     : Oakes / Roman
 --%>
-
+<%@page import="prodToCheckout.ProductToCheckout"%>
 <%@page import="shipping.ShippingCalc"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="product.Product"%>
@@ -81,7 +81,9 @@
                 <label for="">Credit Card Number</label>
                 <input type="text" name="cardNumber" value=""> 
                 <label for="">Expiration Date</label>
-                <input type="text" name="ExpDate" value=""> <label for="">Security Code</label><input type="text" name="SecCode" value="">
+                <input type="text" name="ExpDate" value=""> 
+                <label for="">Security Code</label>
+                <input type="text" name="SecCode" value="">
                 
                 
                 <br />
