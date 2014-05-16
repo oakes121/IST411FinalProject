@@ -19,7 +19,11 @@
     <body style="background-color: #690;">
         <div style ="padding: 30px;">
         <img style="width:300px;" src ="pig.png">
-        <h3><%= custName %> your total price is $<%= price %>.</h3>
+        <h3><%= request.getAttribute("CustName") %>,<br/>
+            <p></p>
+            Your total price is $<%= request.getAttribute("price") %>.<br/>
+            Your shipping charges are $<%= request.getAttribute("rate") %>.<br/></h3>
+            <p>Thank you for shopping with us!</p>
         </div>
     </body>
 </html>

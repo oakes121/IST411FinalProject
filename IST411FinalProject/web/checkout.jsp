@@ -62,7 +62,7 @@
         <form action="SecondServlet" method="post" >
             <span style="font-family: '@Arial Unicode MS'; font-weight: bold; font-style: normal; text-decoration:  underline; font-size: 12pt;"><head>Customer Information</head> </span>
                 <p>
-                <label for=""><span style="font-family: '@Arial Unicode MS'; font-weight: normal; font-style: normal; text-decoration: none; font-size: 12pt;">Customer Name</span></label> 
+                <label for=""><span style="font-family: '@Arial Unicode MS'; font-weight: normal; font-style: normal; text-decoration: none; font-size: 12pt;">Your name as it appears on your card</span></label> 
                 <input type="text" name="CustName" value=""></p>
                 <p>
                 <label for="">Street Address</label>

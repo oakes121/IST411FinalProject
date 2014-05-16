@@ -45,6 +45,7 @@ public class CheckoutServlet extends HttpServlet {
             String cardNumber = (String) request.getParameter("cardNumber");
             String custName = (String) request.getParameter("CustName"); 
             String weight = (String) request.getAttribute("weight");
+            String totalPrice = (String) request.getAttribute("price");
             
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -59,18 +60,16 @@ public class CheckoutServlet extends HttpServlet {
             if (CreditCardValidation.validate(cardNumber)) {
                 
                 rate = ShippingCalc.getRate(zip,lb);              
-                
+                                
+                request.setAttribute("totalPrice", totalPrice);
                 request.setAttribute("CustName", custName);
-                
-                String url = "/confirmTotal.jsp";
-                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
                 request.setAttribute("rate", rate);
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/confirmTotal.jsp");
                 dispatcher.forward(request, response);                   
             } 
             
             else {
                 request.setAttribute("error", cardNumber);
-                
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/errorPage.jsp");
                 dispatcher.forward(request, response);  
             }
