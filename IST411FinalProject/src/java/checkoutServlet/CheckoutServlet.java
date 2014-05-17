@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 public class CheckoutServlet extends HttpServlet {
     
     private double rate;
-    private int zipCode;
+    private int zip;
     private float lb;
     
     /**
@@ -44,7 +44,11 @@ public class CheckoutServlet extends HttpServlet {
           
             String cardNumber = (String) request.getParameter("cardNumber");
             String custName = (String) request.getParameter("CustName"); 
-            String weight = (String) request.getAttribute("weight");
+            //String weight = (String) request.getAttribute("weight");
+            String address = (String) request.getParameter("Street Address");
+            String city = (String) request.getParameter("City");
+            String state = (String) request.getParameter("State");
+            String zipCode = (String) request.getParameter("zip");
             String price = (String) request.getAttribute("price");
             
             out.println("<!DOCTYPE html>");
@@ -56,14 +60,19 @@ public class CheckoutServlet extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
             
+            rate = ShippingCalc.getRate(zip,lb);   
             
             if (CreditCardValidation.validate(cardNumber)) {
                 
-                rate = ShippingCalc.getRate(zipCode,lb);              
+               // rate = ShippingCalc.getRate(zipCode,lb);              
                                 
                 request.setAttribute("price", price);
                 request.setAttribute("CustName", custName);
                 request.setAttribute("rate", rate);
+                request.setAttribute("Street Address", address);
+                request.setAttribute("City", city);
+                request.setAttribute("State", state);
+                request.setAttribute("zip", zipCode);
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/confirmTotal.jsp");
                 dispatcher.forward(request, response);                   
             } 
