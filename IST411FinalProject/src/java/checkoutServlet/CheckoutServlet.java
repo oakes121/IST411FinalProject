@@ -66,13 +66,13 @@ public class CheckoutServlet extends HttpServlet {
                 
                // rate = ShippingCalc.getRate(zipCode,lb);              
                                 
-                request.setAttribute("price", price);
                 request.setAttribute("CustName", custName);
-                request.setAttribute("rate", rate);
                 request.setAttribute("Street Address", address);
                 request.setAttribute("City", city);
                 request.setAttribute("State", state);
                 request.setAttribute("zipCode", zipCode);
+                request.setAttribute("Price", price);
+                request.setAttribute("rate", rate);
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/confirmTotal.jsp");
                 dispatcher.forward(request, response);                   
             } 
