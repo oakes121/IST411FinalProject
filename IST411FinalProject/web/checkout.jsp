@@ -69,36 +69,62 @@
        
         
         <form action="SecondServlet" method="post" >
-            <span style="font-family: '@Arial Unicode MS'; font-weight: bold; font-style: normal; text-decoration:  underline; font-size: 12pt;"><head>Customer Information</head> </span>
-                <p>
-                <label for=""><span style="font-family: '@Arial Unicode MS'; font-weight: normal; font-style: normal; text-decoration: none; font-size: 12pt;">Your name as it appears on your card</span></label> 
-                <input type="text" name="CustName" value=""></p>
-                <p>
-                <label for="">Street Address</label>
-                <input type="text" name="Street Address" value=""></p>
-                <p>
-                <label for="">City</label>
-                <input type="text" name="City" value="" required>
-                <label for="">State</label>
-                <input type="text" name="State" value="" required>
-                <label for="">Zip Code</label>
-                <input type="text" name="zipCode" value="" required></p>
-                <br />
-                <hr>
-                <p>
-                <span style="font-family: '@Arial Unicode MS'; font-weight: bold; font-style: normal; text-decoration:  underline; font-size: 12pt;"><head>Payment Information</head></span></p>
-                <label for="">Credit Card Number</label>
-                <input type="text" name="cardNumber" value=""> 
-                <label for="">Expiration Date</label>
-                <input type="text" name="ExpDate" value=""> 
-                <label for="">Security Code</label>
-                <input type="text" name="SecCode" value="">
+            <span style="font-family: '@Arial Unicode MS'; font-weight: bold; font-style: normal; text-decoration:  underline; font-size: 12pt;">
+                <h2>Customer Information</h2> </span>
+            <table width="" border="0">
                 
-                
-                <br />
-                <br />
-                <br />
-                
+                <tr>
+                  <td><label for="">Full Name</label></td>
+                  <td><input type="text" name="CustName" value=""></td>
+                  
+                </tr>
+                <tr>
+                  
+                  <td><label for="">Street Address</label></td>
+                  <td><input type="text" name="Street Address" value=""></td>
+                  
+                </tr>
+                <tr>
+                  <td><label for="">City</label></td>
+                  <td><input type="text" name="City" value="" required></td>
+                  
+                </tr>
+                <tr>
+                  <td><label for="">State</label></td>
+                  <td><input type="text" name="State" value="" required></td>
+                </tr>
+                <tr>
+                  <td><label for="">Zip Code</label></td>
+                  <td><input type="text" name="zipCode" value="" required></td>
+                  
+                </tr>
+            </table>
+            <br />
+            <br />
+            <h2>Payment Information</h2>
+          <table width="" border="0">
+              
+                <tr>
+                  <td><label for="">Credit Card Number</label></td>
+                  <td><input type="text" name="cardNumber" value=""> </td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td><label for="">Expiration Date</label></td>
+                  <td><input type="text" name="ExpDate" value=""> </td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td><label for="">Security Code</label></td>
+                  <td><input type="text" name="SecCode" value=""></td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+          </table>
+
+       
                 <%
                 
                    // request.setAttribute("price", price);
