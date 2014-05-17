@@ -71,7 +71,7 @@
        
         
         <form action="SecondServlet" method="post" >
-            <span style="font-family: '@Arial Unicode MS'; font-weight: bold; font-style: normal; text-decoration:  underline; font-size: 12pt;">
+            
                 <h2>Customer Information</h2> </span>
             <table width="" border="0">
                 
