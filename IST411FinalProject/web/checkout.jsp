@@ -27,6 +27,9 @@
        <%
             int weight = 0;
             int price = 0;
+            String city;
+            String state;
+            String zip;
             
           
         %>
@@ -73,7 +76,7 @@
                 <label for="">State</label>
                 <input type="text" name="State" value="" required>
                 <label for="">Zip Code</label>
-                <input type="text" name="ZipCode" value="" required></p>
+                <input type="text" name="zipCode" value="" required></p>
                 <br />
                 <hr>
                 <p>
@@ -93,6 +96,7 @@
                 <%
                     request.setAttribute(Integer.toString(price), price);
                     request.setAttribute(Integer.toString(weight), weight);
+                                      
                 %>
                                 
                 <input type="Submit" name="Submit" value="Submit" onClick="return allNumeric(form)">

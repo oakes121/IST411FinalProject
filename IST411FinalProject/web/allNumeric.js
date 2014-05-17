@@ -1,6 +1,6 @@
 function allNumeric(form){   
     var d = form.cardNumber.value;
-    var zip = form.ZipCode.value;
+    var zip = form.zipCode.value;
     var numbers = /^[0-9]+$/;
     
     if(!d.match(numbers)){
