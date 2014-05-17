@@ -17,17 +17,21 @@
     %>
     
     <body style="background-color: #690;">
-        <div style ="padding: 20px;">
-            <h1><img style="width:300px; padding: 30px;" align="left" src ="pig.png">
-                Shipping and billing info:</h1>
-            <hr>
+        
+            <img style="width:300px; padding: 10px;" align="left" src ="pig.png">
+                <div style ="padding: 20px; float: right; margin-right: 45%;">
+                <h1>Shipping and billing info:</h1>
+                  
             <h2>  <%= request.getAttribute("CustName") %><br/>
-                  <%= request.getAttribute("Street Address") %>
-                   <%= request.getAttribute("City") %>,  <%= request.getAttribute("State") %><br/>
-                    <%= request.getAttribute("zip") %>
+                  <%= request.getAttribute("Street Address") %><br/>
+                  <%= request.getAttribute("City") %>,  <%= request.getAttribute("State") %><br/>
+                  <%= request.getAttribute("zip") %>
+                  <hr>
+                  <h1>Purchased items:</h1>  
+                  
             <h2> Your total price is $<%= request.getAttribute("price") %>.<br/>
             Your shipping charges are $<%= request.getAttribute("rate") %>.<br/></h2>
-            <p style ="margin-left: 30px;">Thank you for shopping with us!</p>
+            <p style ="margin-left: 10px;">Thank you for shopping with us!</p>
         </div>
     </body>
 </html>
