@@ -100,6 +100,8 @@
                 <br />
                 
                 <%
+                
+                   // request.setAttribute("price", price);
                     request.setAttribute(Integer.toString(price), price);
                     request.setAttribute(Integer.toString(weight), weight);
                                       

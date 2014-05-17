@@ -71,7 +71,7 @@ public class CheckoutServlet extends HttpServlet {
                 request.setAttribute("City", city);
                 request.setAttribute("State", state);
                 request.setAttribute("zipCode", zipCode);
-                request.setAttribute("Price", price);
+                request.setAttribute("price", price);
                 request.setAttribute("rate", rate);
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/confirmTotal.jsp");
                 dispatcher.forward(request, response);                   
