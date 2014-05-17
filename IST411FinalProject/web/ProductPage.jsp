@@ -23,9 +23,13 @@
         
         
     <body body style="background-color: #690;">
-        <img style="width:300px;" src ="pig.png">
+        <div style="width: 20%; float: left; padding: 10px;">
+            <img style="width:200px;"  src ="pig.png"><br/>
+                           
+        </div>
         <br/>
         <br/>
+        <div style ="padding: 10px; margin-left: 20%; border-left: solid;">
         <h3>Please Make a Selection:</h3>
         <table style="width:500px">
             <form action="PTC" method="post">
@@ -69,6 +73,6 @@
                     <input type="Submit" name="Submit" value="Proceed To Checkout">
             </form>
          </table>
-        
+        </div>
     </body>
 </html>

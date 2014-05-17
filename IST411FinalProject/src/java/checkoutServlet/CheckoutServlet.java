@@ -48,7 +48,7 @@ public class CheckoutServlet extends HttpServlet {
             String address = (String) request.getParameter("Street Address");
             String city = (String) request.getParameter("City");
             String state = (String) request.getParameter("State");
-            String zipCode = (String) request.getParameter("zip");
+            String zipCode = (String) request.getParameter("zipCode");
             String price = (String) request.getAttribute("price");
             
             out.println("<!DOCTYPE html>");
@@ -72,7 +72,7 @@ public class CheckoutServlet extends HttpServlet {
                 request.setAttribute("Street Address", address);
                 request.setAttribute("City", city);
                 request.setAttribute("State", state);
-                request.setAttribute("zip", zipCode);
+                request.setAttribute("zipCode", zipCode);
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/confirmTotal.jsp");
                 dispatcher.forward(request, response);                   
             } 

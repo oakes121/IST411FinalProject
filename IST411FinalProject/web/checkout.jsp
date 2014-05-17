@@ -19,22 +19,27 @@
             ArrayList<Product> selected = (ArrayList<Product>) request.getAttribute("selected");
         %>
             
-        <div style ="padding: 30px;">
-        <img style="width:300px;" src ="pig.png">
+       
+        <div style="width: 20%; float: left; padding: 10px;">
+            <img style="width:200px;"  src ="pig.png"><br/>
+            <h2>Check Out</h2>
+                
+        </div>
+        
+         
         <script src="allNumeric.js"></script>
-        <h1>Checkout</h1>
+        <div style ="padding: 10px; margin-left: 20%; border-left: solid;">
+        
         
        <%
             int weight = 0;
             int price = 0;
-            String city;
-            String state;
-            String zip;
+            
             
           
         %>
         
-        <div>
+        
             
             
             <h2>Your Shopping Cart</h2>
@@ -60,8 +65,9 @@
                 }
                 
             %>
-        </div>
-        <hr>
+        
+       
+        
         <form action="SecondServlet" method="post" >
             <span style="font-family: '@Arial Unicode MS'; font-weight: bold; font-style: normal; text-decoration:  underline; font-size: 12pt;"><head>Customer Information</head> </span>
                 <p>
@@ -101,5 +107,6 @@
                                 
                 <input type="Submit" name="Submit" value="Submit" onClick="return allNumeric(form)">
         </form>
+        </div>
     </body>
 </html>

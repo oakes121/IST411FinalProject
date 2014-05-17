@@ -18,17 +18,17 @@
     
     <body style="background-color: #690;">
         <div>
-            <img style="width:300px; padding: 10px;" align="left" src ="pig.png">
+            <img style="width:200px; padding: 10px;" align="left" src ="pig.png">
             
         </div>
-                <div style ="padding: 20px; float: right; margin-right: 45%; border-left: solid;">
+                <div style ="padding: 20px; float: right; margin-right: 50%; border-left: solid;">
                     
-                <h1>Shipping and billing info:</h1>
+                <h1>Shipping and Billing info:</h1>
                   
-            <h2>  <%= request.getAttribute("CustName") %><br/>
-                  <%= request.getAttribute("Street Address") %><br/>
+                <h2>  <%= request.getAttribute("CustName") %></h2>
+                <h3> <%= request.getAttribute("Street Address") %><br/>
                   <%= request.getAttribute("City") %>,  <%= request.getAttribute("State") %><br/>
-                  <%= request.getAttribute("zip") %>
+                  <%= request.getAttribute("zipCode") %></h3>
                   <hr>
                   <h1>Purchased items:</h1>  
                   
