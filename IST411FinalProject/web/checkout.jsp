@@ -47,16 +47,18 @@
             <%
             
                 for (int i = 0; i<selected.size();i++) {
+                    out.println("<table width='' border='0'>");
                     out.println("<tr>");
                     out.println("<td>");
                     out.println("Product: " + selected.get(i).getTitle());
                     out.println("</td>");
-                    out.println("<td>");
-                    out.println("Price " + selected.get(i).getPrice() + "$");
-                    out.println("</td>");
+                    out.println("</tr>");
                     out.println("<td>");
                     out.println("Weight " + selected.get(i).getWeight() + "lbs");
-                    out.println("</td><br><br>");
+                    out.println("</td>");
+                    out.println("<td>");
+                    out.println("Price $" + selected.get(i).getPrice());
+                    out.println("</td></tr></table><br><br>");
                     
                     weight += Integer.parseInt(selected.get(i).getWeight());
                     price += Integer.parseInt(selected.get(i).getPrice());
