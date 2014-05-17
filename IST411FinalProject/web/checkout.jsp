@@ -109,20 +109,17 @@
                 <tr>
                   <td><label for="">Credit Card Number</label></td>
                   <td><input type="text" name="cardNumber" value=""> </td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
+                  
                 </tr>
                 <tr>
                   <td><label for="">Expiration Date</label></td>
                   <td><input type="text" name="ExpDate" value=""> </td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
+                  
                 </tr>
                 <tr>
                   <td><label for="">Security Code</label></td>
                   <td><input type="text" name="SecCode" value=""></td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
+                  
                 </tr>
           </table>
 
