@@ -17,9 +17,12 @@
     %>
     
     <body style="background-color: #690;">
-        
+        <div>
             <img style="width:300px; padding: 10px;" align="left" src ="pig.png">
-                <div style ="padding: 20px; float: right; margin-right: 45%;">
+            
+        </div>
+                <div style ="padding: 20px; float: right; margin-right: 45%; border-left: solid;">
+                    
                 <h1>Shipping and billing info:</h1>
                   
             <h2>  <%= request.getAttribute("CustName") %><br/>
@@ -31,7 +34,7 @@
                   
             <h2> Your total price is $<%= request.getAttribute("price") %>.<br/>
             Your shipping charges are $<%= request.getAttribute("rate") %>.<br/></h2>
-            <p style ="margin-left: 10px;">Thank you for shopping with us!</p>
+            
         </div>
     </body>
 </html>
