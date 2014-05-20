@@ -38,10 +38,7 @@
             
           
         %>
-        
-        
-            
-            
+              
             <h2>Your Shopping Cart</h2>
             <h3>Products</h3>            
             <%
