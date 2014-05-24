@@ -22,9 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class CheckoutServlet extends HttpServlet {
     
-    private double rate;
-    private int zip;
-    private float lb;
+  
     
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -44,12 +42,12 @@ public class CheckoutServlet extends HttpServlet {
           
             String cardNumber = (String) request.getParameter("cardNumber");
             String custName = (String) request.getParameter("CustName"); 
-            //String weight = (String) request.getAttribute("weight");
             String address = (String) request.getParameter("Street Address");
             String city = (String) request.getParameter("City");
             String state = (String) request.getParameter("State");
-            String zipCode = (String) request.getParameter("zipCode");
-            String price = (String) request.getAttribute("price");
+            String price = (String) request.getParameter("price");
+            String weight = (String) request.getParameter("weight");
+            String zipCode = (String) request.getParameter("zip");
             
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -59,12 +57,13 @@ public class CheckoutServlet extends HttpServlet {
             out.println("<body>");
             out.println("</body>");
             out.println("</html>");
-            
-            rate = ShippingCalc.getRate(zip,lb);   
+              
             
             if (CreditCardValidation.validate(cardNumber)) {
-                
-               // rate = ShippingCalc.getRate(zipCode,lb);              
+                int zip = Integer.parseInt(zipCode);
+                float lb = Integer.parseInt(weight);
+                double rate;
+                rate = ShippingCalc.getRate(zip,lb);              
                                 
                 request.setAttribute("CustName", custName);
                 request.setAttribute("Street Address", address);

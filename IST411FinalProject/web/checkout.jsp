@@ -56,9 +56,8 @@
                     out.println("<td>");
                     out.println("Price $" + selected.get(i).getPrice());
                     out.println("</td></tr></table><br><br>");
-                    
-                    weight += Integer.parseInt(selected.get(i).getWeight());
-                    price += Integer.parseInt(selected.get(i).getPrice());
+                    weight = weight + Integer.parseInt(selected.get(i).getWeight());
+                    price =price + Integer.parseInt(selected.get(i).getPrice());
                     
                     
                 }
@@ -68,6 +67,9 @@
        
         
         <form action="SecondServlet" method="post" >
+            <input type="hidden" name="price" value="<% out.print(price); %>">
+            <input type="hidden" name="weight" value="<% out.print(weight); %>">
+            
             
                 <h2>Customer Information</h2> </span>
             <table width="" border="0">
@@ -94,7 +96,7 @@
                 </tr>
                 <tr>
                   <td><label for="">Zip Code</label></td>
-                  <td><input type="text" name="zipCode" value="" required></td>
+                  <td><input type="text" name="zip" value="" required></td>
                   
                 </tr>
             </table>
@@ -120,14 +122,7 @@
                 </tr>
           </table>
 
-       
-                <%
-                
-                   // request.setAttribute("price", price);
-                    request.setAttribute(Integer.toString(price), price);
-                    request.setAttribute(Integer.toString(weight), weight);
-                                      
-                %>
+    
                                 
                 <input type="Submit" name="Submit" value="Submit" onClick="return allNumeric(form)">
         </form>
