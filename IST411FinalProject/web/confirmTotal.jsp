@@ -32,7 +32,7 @@
                   <hr>
                   <h1>Purchased items:</h1>  
                   
-            <h2> Your total price is $<%= request.getAttribute("price") %>.<br/>
+            <h2> Your total price is $<%= request.getAttribute("price") %>.00.<br/>
             Your shipping charges are $<%= request.getAttribute("rate") %>0.<br/></h2>
             <br />
             <p>Press the Confirm button to complete your purchase</p>
