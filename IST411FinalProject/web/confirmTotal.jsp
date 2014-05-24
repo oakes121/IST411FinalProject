@@ -33,7 +33,7 @@
                   <h1>Purchased items:</h1>  
                   
             <h2> Your total price is $<%= request.getAttribute("price") %>.<br/>
-            Your shipping charges are $<%= request.getAttribute("rate") %>.<br/></h2>
+            Your shipping charges are $<%= request.getAttribute("rate") %>0.<br/></h2>
             <br />
             <p>Press the Confirm button to complete your purchase</p>
             <form action="thankYou.html"><input type="submit" name="next" value="Confirm"></form>
