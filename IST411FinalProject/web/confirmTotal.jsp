@@ -1,7 +1,7 @@
 <%-- 
     Document   : confirmTotal
     Created on : Apr 29, 2014, 11:30:36 AM
-    Author     : Oakes / Roman
+    Author     : Roman
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
